@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-modal</title>
+    <link rel="stylesheet" href="js-modal.css">
+    <style>
+    p {
+        margin-bottom: 5px;
+    }
+    code {
+        background-color: #eee;
+        border-radius: 3px;
+        font-family: courier, monospace;
+        padding: 2px 5px;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <p>Call modal window:</p>
+	<code>modal({message: 'Text'});</code>
+    <p>Call modal window (Success):</p>
+    <code>modal({message: 'Text', title: 'Success', type: 'success'});</code>
+    <p>Call modal window (Error):</p>
+	<code>modal({message: 'Text', title: 'Error', type: 'error'});</code>
+    <p>Call modal window with update (Success):</p>
+<pre><code>let current = modal({message: 'Send...'});
+setTimeout(function() {
+    modal({message: 'Text', title: 'Success', type: 'success', current: current});
+}, 2000);</code></pre>
+
+	<script src="js-modal.js"></script>
+	<script>
+	modal({message: 'Text'});
+	modal({message: 'Text', title: 'Success', type: 'success'});
+	modal({message: 'Text', title: 'Error', type: 'error'});
+
+	let current = modal({message: 'Send...'});
+
+    setTimeout(function() {
+        modal({message: 'Text', title: 'Error', type: 'error', current: current});
+    }, 2000);
+	</script>
+</body>
+</html>
