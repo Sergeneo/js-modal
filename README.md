@@ -6,26 +6,26 @@
 Call modal window:
 
 ```
-modal({message: 'Text'});
+modal('Text');
 ```
 
 Call modal window (Success):
 
 ```
-modal({message: 'Text', title: 'Success', type: 'success'});
+modal('Text', 'Success', 'success');
 ```
 
 Call modal window (Error):
 
 ```
-modal({message: 'Text', title: 'Error', type: 'error'});
+modal('Text', 'Error', 'error');
 ```
 
 Call modal window with update (Success):
 
 ```
-let current = modal({message: 'Send...'});
+let current = modal('Send...');
 setTimeout(function() {
-    modal({message: 'Text', title: 'Success', type: 'success', current: current});
+    modal('Text', 'Success', 'success', current);
 }, 2000);
 ```
