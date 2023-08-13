@@ -33,7 +33,6 @@ function modal(message, title = 'Notice', type = 'notice', current = false) {
 			let mousemove = isMobile ? 'touchmove' : 'mousemove';
 			let mouseup = isMobile ? 'touchend' : 'mouseup';
 
-			console.log(mousemove, mouseup);
 			Array.from(document.querySelectorAll('.modal')).forEach((el) => el.classList.remove('focus'));
 			modal.classList.add('focus');
 
