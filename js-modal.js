@@ -1,4 +1,4 @@
-function modal({message = '', title = 'Notice', type = 'notice', current = false}) {
+function modal(message, title = 'Notice', type = 'notice', current = false) {
 	if (typeof message === 'object') message = JSON.stringify(message);
 
 	if (current) {
