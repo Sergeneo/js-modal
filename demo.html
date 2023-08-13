@@ -20,28 +20,28 @@
 </head>
 <body>
     <p>Call modal window:</p>
-	<code>modal({message: 'Text'});</code>
+	<code>modal('Text');</code>
     <p>Call modal window (Success):</p>
-    <code>modal({message: 'Text', title: 'Success', type: 'success'});</code>
+    <code>modal('Text', 'Success', 'success');</code>
     <p>Call modal window (Error):</p>
-	<code>modal({message: 'Text', title: 'Error', type: 'error'});</code>
+	<code>modal('Text', 'Error', 'error');</code>
     <p>Call modal window with update (Success):</p>
-<pre><code>let current = modal({message: 'Send...'});
+<pre><code>let current = modal('Send...');
 setTimeout(function() {
-    modal({message: 'Text', title: 'Success', type: 'success', current: current});
+    modal('Text', 'Success', 'success', current);
 }, 2000);</code></pre>
 
 	<script src="js-modal.js"></script>
 	<script>
-	modal({message: 'Text'});
-	modal({message: 'Text', title: 'Success', type: 'success'});
-	modal({message: 'Text', title: 'Error', type: 'error'});
+	modal('Text');
+	modal('Text', 'Success', 'success');
+	modal('Text', 'Error', 'error');
 
-	let current = modal({message: 'Send...'});
+	let current = modal('Send...');
 
-    setTimeout(function() {
-        modal({message: 'Text', title: 'Error', type: 'error', current: current});
-    }, 2000);
+	setTimeout(function() {
+		modal('Text', 'Success', 'success', current);
+	}, 2000);
 	</script>
 </body>
 </html>
